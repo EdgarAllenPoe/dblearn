@@ -1,4 +1,5 @@
 <h3>Total Donations: {{donationTotal}}</h3>
+<p class="bg-info">Thanks {{name}} for pledging {{amount}} towards this project. Someone will be calling you at: {{mobile}} or sending an email to: {{email}} to confirm this pledge</p>
 <div class="container">
     <div class="row">
         <div class="col-md-3">
@@ -52,7 +53,7 @@
                             {{#if donation.isCompleted}} &#x2713; {{else}} &#x2717; {{/if}}
                         </td> --}}
                         <td {{action "deleteDonation" donation on="click" }}>
-                            x
+                            <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </td>
                     </tr>
                     {{/each}}
