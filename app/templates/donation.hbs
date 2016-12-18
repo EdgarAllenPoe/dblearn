@@ -1,0 +1,63 @@
+<h3>Total Donations: {{dtotal}}</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h2>New Donation</h2>
+            <form {{action "createDonation" on="submit" }}>
+                <div class="form-group">
+                                   <label>Name</label>
+                    {{input value=name class="form-control"}}
+                    <label>Mobile</label>
+                    {{input value=mobile class="form-control"}}
+                    <label>Email</label>
+                    {{input value=email class="form-control"}}
+                    <label>Date</label>
+                    {{input value=tdate class="form-control"}}
+                    <label>Amount</label>
+                    {{input value=amount class="form-control"}}
+                </div>
+                <div class="checkbox">
+                    {{!--
+                    <label>
+                        {{input type="checkbox" name="isCompleted" checked=isCompleted}} Complete?
+                    </label> --}}
+                </div>
+                <input type="submit" value="Add Donation" class="btn btn-primary">
+            </form>
+        </div>
+        <div class="col-md-9">
+            <h2>Donations</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each model as |donation|}}
+                    <tr>
+   
+                        <td>{{donation.name}}</td>
+                        <td>{{donation.mobile}}</td>
+                        <td>{{donation.email}}</td>
+                        <td>{{donation.tdate}}</td>
+                        <td>{{donation.amount}}</td>																																																																																																											
+{{!--                         <td>
+                            {{#if donation.isCompleted}} &#x2713; {{else}} &#x2717; {{/if}}
+                        </td> --}}
+                        <td {{action "deleteDonation" donation on="click" }}>
+                            x
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
