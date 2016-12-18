@@ -33,17 +33,24 @@ export default Ember.Controller.extend({
 
     },
 
-dtotal: Ember.computed('total', function() {
-    let btotal = 3991932;
-    return btotal;
-  })
 
 
-// total: Ember.computed('donation.@each.amount', function() {
-//   return this.get('donation').reduce(function(acc, value) {
-//     return acc + value.get('amount');
-//   }, 0);
-// })
+
+  //  donationTotal: Ember.computed.filterBy('donation', 'isDone', false)
+
+
+// dtotal: Ember.computed('total', function() {
+//     let btotal = 3991932;
+//     return btotal;
+//   })
+
+
+donationTotal: Ember.computed('donation.@each.amount', function() {
+    debugger;
+  return this.get('donation').reduce(function(acc, value) {
+    return acc + value.get('amount');
+  }, 0);
+})
 
 // total: Ember.computed('total', function() {
 //     [1, 2, 3].reduce(function(acc, value) {return acc + value;}, 0);

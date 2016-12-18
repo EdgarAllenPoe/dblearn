@@ -9,7 +9,7 @@ email: attr('string'),
 tdate: attr('string'),
 amount: attr('number'),
 rev: attr('string'),
-dtotal: attr('number'),
+//donationTotal: attr('number'),
 
 
 });
