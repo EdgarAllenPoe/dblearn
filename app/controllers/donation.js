@@ -27,9 +27,9 @@ export default Ember.Controller.extend({
         },
     },
 
-    donationTotal: Ember.computed('donation.@each.amount', function() {
-        debugger;
-        return this.get('donation').reduce(function(acc, value) {
+    donationTotal: Ember.computed('model.@each.amount', function() {
+       // debugger;
+        return this.get('model').reduce(function(acc, value) {
             return acc + value.get('amount');
         }, 0);
     })
