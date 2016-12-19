@@ -1,5 +1,6 @@
-<h3>Total Donations: {{donationTotal}}</h3>
-<p class="bg-info">Thanks {{name}} for pledging {{amount}} towards this project. Someone will be calling you at: {{mobile}} or sending an email to: {{email}} to confirm this pledge</p>
+<h3>Total Donations: {{gua-currency donationTotal}}</h3>
+
+<p class="bg-info">Thanks {{name}} for pledging {{gua-currency amount}} towards this project. Someone will be calling you at: {{mobile}} or sending an email to: {{email}} to confirm this pledge</p>
 <div class="container">
     <div class="row">
         <div class="col-md-3">
@@ -14,9 +15,9 @@
                     {{input value=email class="form-control"}}
                     <label>Date</label>
                     {{input value=tdate class="form-control"}}
-                    <label>Amount</label>
+                    <label>Amount: {{gua-currency amount}}</label>
                     {{input value=amount class="form-control"}}
-                </div>
+                                    </div>
                 <div class="checkbox">
                     {{!--
                     <label>
@@ -48,7 +49,7 @@
                         <td>{{donation.mobile}}</td>
                         <td>{{donation.email}}</td>
                         <td>{{donation.tdate}}</td>
-                        <td>{{donation.amount}}</td>																																																																																																											
+                        <td>{{gua-currency donation.amount}}</td>																																																																																																											
 {{!--                         <td>
                             {{#if donation.isCompleted}} &#x2713; {{else}} &#x2717; {{/if}}
                         </td> --}}
