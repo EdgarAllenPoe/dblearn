@@ -1,13 +1,58 @@
-<h3>Total Donations: {{gua-currency donationTotal}}</h3>
 
-<p class="bg-info">Thanks {{name}} for pledging {{gua-currency amount}} towards this project. Someone will be calling you at: {{mobile}} or sending an email to: {{email}} to confirm this pledge</p>
+<div class="container well project-well">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <h1>Lorem ipsum dolor sit amet <br></h1> here{{donation.donationTotal}}here
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quidem aperiam vero sunt dicta, delectus odio, consectetur dolorum incidunt </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <img src="http://placehold.it/880x480" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-md-4 info-sidebar">
+            <hr>
+            <h2></h2>
+            <h2>{{gua-currency donationTotal}}</h2>
+            <p>pledged of {{gua-currency 15000000}} goal</p>
+            <h2>{{backerTotal}}</h2>
+            <p>backers</p>
+            <h2>{{daycountdown "March 21, 2017"}}</h2>
+            <p>days to go</p>
+            <button type="button" class="btn btn-success">Back This Project</button>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
-            <h2>New Donation</h2>
-            <form {{action "createDonation" on="submit" }}>
+        <div class="col-md-8">
+            <h3>About this project </h3>
+            <div class="text-center"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+                <h1 class="text-center">Lorem ipsum dolor sit amet</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quidem aperiam vero sunt dicta, delectus odio, consectetur dolorum incidunt </p>
+                <img src="http://placehold.it/880x480" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="text-center">
+                <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+            </div>
+            <h1 class="text-center">Lorem ipsum dolor sit amet</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quidem aperiam vero sunt dicta, delectus odio, consectetur dolorum incidunt </p>
+            <img src="http://placehold.it/880x480" class="img-fluid" alt="Responsive image">
+            <div class="text-center">
+                <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+            </div>
+            <h1 class="text-center">Lorem ipsum dolor sit amet</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quidem aperiam vero sunt dicta, delectus odio, consectetur dolorum incidunt </p>
+            <img src="http://placehold.it/880x480" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-md-4">
+            <h3>Support this project </h3>
+            <div class="alert alert-info" role="alert">
+                           <form {{action "createDonation" on="submit" }}>
                 <div class="form-group">
-                                   <label>Name</label>
+                    <label>Name</label>
                     {{input value=name class="form-control"}}
                     <label>Mobile</label>
                     {{input value=mobile class="form-control"}}
@@ -17,7 +62,48 @@
                     {{input value=tdate class="form-control"}}
                     <label>Amount: {{gua-currency amount}}</label>
                     {{input value=amount class="form-control"}}
-                                    </div>
+                </div>
+                <div class="checkbox">
+                    {{!--
+                    <label>
+                        {{input type="checkbox" name="isCompleted" checked=isCompleted}} Complete?
+                    </label> --}}
+                </div>
+                <input type="submit" value="Add Donation" class="btn btn-primary">
+            </form>
+             </div>
+            <div class="alert alert-info" role="alert">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="alert alert-info" role="alert">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="alert alert-info" role="alert">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3>Total Donations: {{gua-currency donationTotal}}</h3>
+<p class="bg-info">Thanks {{name}} for pledging {{gua-currency amount}} towards this project. Someone will be calling you at: {{mobile}} or sending an email to: {{email}} to confirm this pledge</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h2>New Donation</h2>
+            <form {{action "createDonation" on="submit" }}>
+                <div class="form-group">
+                    <label>Name</label>
+                    {{input value=name class="form-control"}}
+                    <label>Mobile</label>
+                    {{input value=mobile class="form-control"}}
+                    <label>Email</label>
+                    {{input value=email class="form-control"}}
+                    <label>Date</label>
+                    {{input value=tdate class="form-control"}}
+                    <label>Amount: {{gua-currency amount}}</label>
+                    {{input value=amount class="form-control"}}
+                </div>
                 <div class="checkbox">
                     {{!--
                     <label>
@@ -32,7 +118,6 @@
             <table class="table">
                 <thead>
                     <tr>
-
                         <th>Name</th>
                         <th>Mobile</th>
                         <th>Email</th>
@@ -44,15 +129,11 @@
                 <tbody>
                     {{#each model as |donation|}}
                     <tr>
-   
                         <td>{{donation.name}}</td>
                         <td>{{donation.mobile}}</td>
                         <td>{{donation.email}}</td>
                         <td>{{donation.tdate}}</td>
-                        <td>{{gua-currency donation.amount}}</td>																																																																																																											
-{{!--                         <td>
-                            {{#if donation.isCompleted}} &#x2713; {{else}} &#x2717; {{/if}}
-                        </td> --}}
+                        <td>{{gua-currency donation.amount}}</td>
                         <td {{action "deleteDonation" donation on="click" }}>
                             <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </td>
@@ -63,3 +144,4 @@
         </div>
     </div>
 </div>
+{{outlet}}
