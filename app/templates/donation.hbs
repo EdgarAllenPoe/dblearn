@@ -2,10 +2,12 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 .side-logo">
+        <span class="sBrand">SIM</span>
+        <span class="fBrand">Paraguay</span>
         </div>
         <div class="col-md-8">
-            <h1>Lorem ipsum dolor sit amet <br></h1> here{{donation.donationTotal}}here
+            <h1>Lorem ipsum dolor sit amet <br></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quidem aperiam vero sunt dicta, delectus odio, consectetur dolorum incidunt </p>
         </div>
         <div class="col-md-2">
@@ -19,13 +21,14 @@
         <div class="col-md-4 info-sidebar">
             <hr>
             <h2></h2>
-            <h2>{{gua-currency donationTotal}}</h2>
-            <p>pledged of {{gua-currency 15000000}} goal</p>
-            <h2>{{backerTotal}}</h2>
-            <p>backers</p>
-            <h2>{{daycountdown "March 21, 2017"}}</h2>
-            <p>days to go</p>
-            <button type="button" class="btn btn-success">Back This Project</button>
+            <h1>{{gua-currency donationTotal}}</h1>
+            <p>de la meta de  {{gua-currency 15000000}}</p>
+            <h1>{{backerTotal}}</h1>
+            <p>patrocinadores</p>
+            <h1>{{daycountdown "March 21, 2017"}}</h1>
+            <p>días más</p>
+            <button type="button" class="btn btn-success"> Patrocinar este proyecto
+</button>
         </div>
     </div>
 </div>
@@ -33,7 +36,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <h3>About this project </h3>
+            <h4>Acerca de este proyecto</h4>
             <div class="text-center"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
                 <h1 class="text-center">Lorem ipsum dolor sit amet</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quidem aperiam vero sunt dicta, delectus odio, consectetur dolorum incidunt </p>
@@ -53,17 +56,17 @@
             <img src="http://placehold.it/880x480" class="img-fluid" alt="Responsive image">
         </div>
         <div class="col-md-4">
-            <h3>Support this project </h3>
+            <h4>Contribuir a este proyecto</h4>
             <div class="alert alert-info" role="alert">
                            <form {{action "createDonation" on="submit" }}>
                 <div class="form-group">
-                    <label>Name</label>
+                    <label>Name: {{name}}</label>
                     {{input value=name class="form-control"}}
                     <br>
-                    <label>Mobile</label>
+                    <label>Mobile: {{mobile}}</label>
                     {{input value=mobile class="form-control"}}
                     <br>
-                    <label>Email</label>
+                    <label>Email: {{email}}</label>
                     {{input value=email class="form-control"}}
                     <br>
                     <label>Amount: {{gua-currency amount}}</label>
@@ -75,7 +78,8 @@
                         {{input type="checkbox" name="isCompleted" checked=isCompleted}} Complete?
                     </label> --}}
                 </div>
-                <input type="submit" value="Add Donation" class="btn btn-success">
+                <input type="submit" value=" Patrocinar este proyecto
+" class="btn btn-success">
             </form>
              </div>
             <div class="alert alert-info" role="alert">
