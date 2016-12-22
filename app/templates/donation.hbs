@@ -1,5 +1,6 @@
+<div class="project-main">
+<div class="container">
 
-<div class="container well project-well">
     <div class="row">
         <div class="col-md-2">
         </div>
@@ -7,8 +8,11 @@
             <h1>Lorem ipsum dolor sit amet <br></h1> here{{donation.donationTotal}}here
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quidem aperiam vero sunt dicta, delectus odio, consectetur dolorum incidunt </p>
         </div>
+        <div class="col-md-2">
+        </div>
     </div>
     <div class="row">
+    
         <div class="col-md-8">
             <img src="http://placehold.it/880x480" class="img-fluid" alt="Responsive image">
         </div>
@@ -24,6 +28,7 @@
             <button type="button" class="btn btn-success">Back This Project</button>
         </div>
     </div>
+</div>
 </div>
 <div class="container">
     <div class="row">
@@ -54,12 +59,13 @@
                 <div class="form-group">
                     <label>Name</label>
                     {{input value=name class="form-control"}}
+                    <br>
                     <label>Mobile</label>
                     {{input value=mobile class="form-control"}}
+                    <br>
                     <label>Email</label>
                     {{input value=email class="form-control"}}
-                    <label>Date</label>
-                    {{input value=tdate class="form-control"}}
+                    <br>
                     <label>Amount: {{gua-currency amount}}</label>
                     {{input value=amount class="form-control"}}
                 </div>
@@ -69,7 +75,7 @@
                         {{input type="checkbox" name="isCompleted" checked=isCompleted}} Complete?
                     </label> --}}
                 </div>
-                <input type="submit" value="Add Donation" class="btn btn-primary">
+                <input type="submit" value="Add Donation" class="btn btn-success">
             </form>
              </div>
             <div class="alert alert-info" role="alert">
@@ -85,36 +91,10 @@
     </div>
 </div>
 
-<h3>Total Donations: {{gua-currency donationTotal}}</h3>
-<p class="bg-info">Thanks {{name}} for pledging {{gua-currency amount}} towards this project. Someone will be calling you at: {{mobile}} or sending an email to: {{email}} to confirm this pledge</p>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
-            <h2>New Donation</h2>
-            <form {{action "createDonation" on="submit" }}>
-                <div class="form-group">
-                    <label>Name</label>
-                    {{input value=name class="form-control"}}
-                    <label>Mobile</label>
-                    {{input value=mobile class="form-control"}}
-                    <label>Email</label>
-                    {{input value=email class="form-control"}}
-                    <label>Date</label>
-                    {{input value=tdate class="form-control"}}
-                    <label>Amount: {{gua-currency amount}}</label>
-                    {{input value=amount class="form-control"}}
-                </div>
-                <div class="checkbox">
-                    {{!--
-                    <label>
-                        {{input type="checkbox" name="isCompleted" checked=isCompleted}} Complete?
-                    </label> --}}
-                </div>
-                <input type="submit" value="Add Donation" class="btn btn-primary">
-            </form>
-        </div>
-        <div class="col-md-9">
-            <h2>Donations</h2>
+        <div class="col-md-12">
+          <h2>Donations</h2>
             <table class="table">
                 <thead>
                     <tr>

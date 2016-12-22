@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
                 name: this.get('name'),
                 mobile: this.get('mobile'),
                 email: this.get('email'),
-                tdate: this.get('tdate'),
+               tdate: this.get('tdate'),
                 amount: this.get('amount'),
             });
 
@@ -26,6 +26,11 @@ export default Ember.Controller.extend({
             donation.save();
         },
     },
+
+    tdate: Ember.computed('', function() {
+
+        return new Date();
+    }),
 
     donationTotal: Ember.computed('model.@each.amount', function() {
 
